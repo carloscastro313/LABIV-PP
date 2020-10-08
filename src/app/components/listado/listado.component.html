@@ -1,0 +1,12 @@
+<div [hidden]="hidden">
+  <mat-progress-bar mode="buffer" ></mat-progress-bar>
+</div>
+<h1 class="title">Listado pokemon</h1>
+<mat-divider></mat-divider>
+
+<mat-list role="list" *ngFor="let pokemon of pokemones">
+  <mat-list-item role="listitem">{{pokemon.id}} {{pokemon.pk.name}} <button mat-button class="btnNav" routerLink='detalle/{{pokemon.pk.name}}' routerLinkActive="active">detalle</button></mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+

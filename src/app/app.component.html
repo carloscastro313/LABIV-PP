@@ -1,0 +1,15 @@
+<mat-sidenav-container class="example-container" style="background: transparent;">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <div class="conteinerNav">
+      <h1>Menu</h1>
+      <mat-divider></mat-divider>
+      <button mat-button class="btnNav" routerLink='listado' routerLinkActive="active">Listado</button>
+      <button mat-button class="btnNav" routerLink='NoRutaExitente' routerLinkActive="active">Ruta que no existe</button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content >
+    <p><button mat-button class="btnIcon" (click)="sidenav.toggle()"><img src="../assets/mainPage/menu.svg"></button></p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
